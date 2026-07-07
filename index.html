@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="PT-br">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <title>Joao Gugu Bot</title>
-        <meta stylesheet src="style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
+        <header>
+        <button id="temaBtn" type="button" onclick="mudarTema()">🌙</button>
+        </header>
         <img id="joaofoto" src="joaogugu.png">
         <h2>Joao Gugu</h2>
         <h3>Um bot divertido para movimentar seu servidor</h3>
-        <button id="botaoadd" type="button">Me Adicione</button>
+        <a href="https://discord.com/oauth2/authorize?client_id=1521691945640923177" id="botaoadd">Me Adicione</a>
         <button id="botaoconfig" type="button">Como Configurar</button>
         <div class="painel">
             <h3>Funcionalidades</h3>
@@ -22,6 +26,6 @@
             </div>
         </div>
         <iframe src="https://discord.com/widget?id=1522197153164955769&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-        
+        <script src="script.js"></script>
     </body>
 </html>
