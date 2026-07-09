@@ -1,87 +1,190 @@
 /* ===================================================
-   TEMA ESCURO (Inspirado no Azul Escuro/Preto do Boneco)
+   TEMA ESCURO
    =================================================== */
 :root, .tema-escuro {
-    /* Cores do Bonequinho */
-    --cor-principal: #0076FF;    /* Azul vivo do moletom */
-    --cor-destaque: #FF9F1C;     /* Amarelo/Laranja do cabelo */
-    --cor-detalhes: #E0A96D;     /* Tom de pele/bege do boneco */
-    
-    /* Fundo e Textos para Tema Escuro */
-    --cor-fundo: #12161A;        /* Azul escuro quase preto */
-    --cor-superficie: #1E252B;   /* Fundo dos cards e painéis */
-    --cor-texto: #FFFFFF;        /* Texto principal */
-    --cor-texto-secundario: #A0AAB2; /* Texto menor/suave */
+    --cor-principal: #0076FF;
+    --cor-destaque: #FF9F1C;
+    --cor-detalhes: #E0A96D;
+    --cor-fundo: #12161A;
+    --cor-superficie: #1E252B;
+    --cor-texto: #FFFFFF;
+    --cor-texto-secundario: #A0AAB2;
 }
 
 /* ===================================================
-   TEMA CLARO (Inspirado nos tons mais acesos)
+   TEMA CLARO
    =================================================== */
 .tema-claro {
     --cor-principal: #0056C6;
     --cor-destaque: #E68500;
     --cor-detalhes: #D49655;
-    
-    --cor-fundo: #F0F4FF;        /* Azul bem clarinho */
-    --cor-superficie: #FFFFFF;   /* Cards brancos puros */
+    --cor-fundo: #F0F4FF;
+    --cor-superficie: #FFFFFF;
     --cor-texto: #12161A;
     --cor-texto-secundario: #606F7B;
 }
 
-/* Estilo Geral da Página */
+/* Estilo Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
-    font-family: sans-serif;
-    transition: background 0.3s, color 0.3s; /* Transição suave ao mudar de tema */
+    font-family: 'Segoe UI', sans-serif;
+    transition: background 0.3s, color 0.3s;
+    padding: 0 40px 60px;
 }
 
-/* Títulos */
-h2, h3 {
-    color: var(--cor-principal); /* Nome do seu bot fica com o azul do moletom */
-}
-
-/* Botão "Me Adicione" */
-#botaoadd {
-    background-color: var(--cor-principal);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Botão "Como Configurar" (Usa a cor do cabelo de destaque) */
-#botaoconfig {
-    background-color: transparent;
-    color: var(--cor-destaque);
-    border: 2px solid var(--cor-destaque);
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* O Painel de Funcionalidades */
-.painel {
-    background-color: var(--cor-superficie);
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-/* Os Cards de cada função */
-.card {
-    background-color: var(--cor-fundo);
-    border-left: 4px solid var(--cor-principal); /* Detalhe em azul na borda do card */
-    padding: 10px;
-    margin: 10px 0;
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 0;
+    margin-bottom: 20px;
 }
 
 #temaBtn {
     background-color: var(--cor-superficie);
     color: var(--cor-texto);
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    padding: 7px;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+/* Hero */
+#joaofoto {
+    display: block;
+    margin: 0 auto 20px;
+    width: 600px;
+    border-radius: 16px;
+}
+
+h2 {
+    color: var(--cor-principal);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+}
+
+h3 {
+    color: var(--cor-texto-secundario);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-bottom: 24px;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+#botaoadd {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+
+#botaoadd:hover {
+    opacity: 0.85;
+}
+
+#botaoconfig {
+    background-color: transparent;
+    color: var(--cor-destaque);
+    border: 2px solid var(--cor-destaque);
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s;
+}
+
+#botaoconfig:hover {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+
+/* Seção Funcionalidades */
+h3.titulo-secao {
+    color: var(--cor-principal);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.painel {
+    background-color: var(--cor-superficie);
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--cor-fundo);
+    border-top: 3px solid var(--cor-principal);
+    border-radius: 10px;
+    padding: 16px;
+    width: 180px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card h5 {
+    color: var(--cor-texto);
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+/* Seção Discord */
+.dc {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dc h3 {
+    max-width: 350px;
+    text-align: left;
+    color: var(--cor-texto);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+iframe {
+    border-radius: 10px;
 }
