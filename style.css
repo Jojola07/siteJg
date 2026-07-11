@@ -1,190 +1,52 @@
-/* ===================================================
-   TEMA ESCURO
-   =================================================== */
-:root, .tema-escuro {
-    --cor-principal: #0076FF;
-    --cor-destaque: #FF9F1C;
-    --cor-detalhes: #E0A96D;
-    --cor-fundo: #12161A;
-    --cor-superficie: #1E252B;
-    --cor-texto: #FFFFFF;
-    --cor-texto-secundario: #A0AAB2;
-}
-
-/* ===================================================
-   TEMA CLARO
-   =================================================== */
-.tema-claro {
-    --cor-principal: #0056C6;
-    --cor-destaque: #E68500;
-    --cor-detalhes: #D49655;
-    --cor-fundo: #F0F4FF;
-    --cor-superficie: #FFFFFF;
-    --cor-texto: #12161A;
-    --cor-texto-secundario: #606F7B;
-}
-
-/* Estilo Geral */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    font-family: 'Segoe UI', sans-serif;
-    transition: background 0.3s, color 0.3s;
-    padding: 0 40px 60px;
+    background: #222222;
 }
 
-/* Header */
-header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 16px 0;
-    margin-bottom: 20px;
-}
-
-#temaBtn {
-    background-color: var(--cor-superficie);
-    color: var(--cor-texto);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    padding: 8px 12px;
-    font-size: 1.2rem;
-    transition: background 0.3s;
-}
-
-/* Hero */
-#joaofoto {
-    display: block;
-    margin: 0 auto 20px;
-    width: 600px;
-    border-radius: 16px;
-}
-
-h2 {
-    color: var(--cor-principal);
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-}
-
-h3 {
-    color: var(--cor-texto-secundario);
-    text-align: center;
-    font-size: 1.1rem;
-    font-weight: normal;
-    margin-bottom: 24px;
-}
-
-/* Botões */
-.botoes {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 50px;
-}
-
-#botaoadd {
-    background-color: var(--cor-principal);
-    color: white;
-    padding: 12px 28px;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: opacity 0.2s;
-}
-
-#botaoadd:hover {
-    opacity: 0.85;
-}
-
-#botaoconfig {
-    background-color: transparent;
-    color: var(--cor-destaque);
-    border: 2px solid var(--cor-destaque);
-    padding: 12px 28px;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background 0.2s, color 0.2s;
-}
-
-#botaoconfig:hover {
-    background-color: var(--cor-destaque);
-    color: white;
-}
-
-/* Seção Funcionalidades */
-h3.titulo-secao {
-    color: var(--cor-principal);
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 16px;
-}
-
-.painel {
-    background-color: var(--cor-superficie);
-    padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 50px;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-color: var(--cor-fundo);
-    border-top: 3px solid var(--cor-principal);
-    border-radius: 10px;
-    padding: 16px;
-    width: 180px;
-    text-align: center;
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-}
-
-.card h5 {
-    color: var(--cor-texto);
-    font-size: 0.95rem;
-    margin-bottom: 10px;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 6px;
-}
-
-/* Seção Discord */
-.dc {
+.navbar {
+    background: #363636;
+    padding: 1.2%;
     display: flex;
     align-items: center;
-    gap: 40px;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.dc h3 {
-    max-width: 350px;
-    text-align: left;
-    color: var(--cor-texto);
-    font-size: 1.1rem;
-    line-height: 1.6;
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-iframe {
-    border-radius: 10px;
+
+.fotobot {
+    width: 67px;
+}
+
+
+.logo h1 {
+    margin-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+
+.navt {
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.3s;
+    font-weight: bold;
+    display: inline-block;
+}
+
+
+.navt:hover {
+    color: #4169E1;
+    transform: translateY(-5px);
+    text-shadow: 0 5px 15px #4169E1;
 }
