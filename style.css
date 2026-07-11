@@ -2,20 +2,30 @@ body {
     background: #222222;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .navbar {
     background: #363636;
     padding: 1.2%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 
 .logo {
     display: flex;
     align-items: center;
+    transition: 0.3s;
 }
 
+.logo:hover {
+    
+    transform: translateY(-4px);
+}
 
 .fotobot {
     width: 67px;
@@ -36,6 +46,7 @@ body {
 
 
 .navt {
+    margin: 0px;
     text-decoration: none;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -49,4 +60,82 @@ body {
     color: #4169E1;
     transform: translateY(-5px);
     text-shadow: 0 5px 15px #4169E1;
+}
+
+h1 {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.iniciodiv {
+    
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+.iniciodiv .btnadd {
+    transition: 0.2s;
+    background-color: #4169E1;
+    padding: 10px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+}
+
+.iniciodiv .btnadd:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px #4169E1;
+}
+
+.fotojoaomeio {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.cardbase {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-top: 100px;
+    background: #363636;
+    border-radius: 20px;
+    gap: 50px;
+    padding: 50px;
+}
+
+.cardbase .card {
+    background: #202020;
+    text-decoration: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    image-rendering: pixelated;
+    border-radius: 30px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 15px #131313;
+}
+
+.cardbase .card:hover {
+    transform: translateY(-10px);
+}
+
+.cardbase .card h2,h3 {
+    text-align: center;
+}
+
+.cardbase .card img {
+    width: 300px;
+    height: 300px;
+    object-fit: fill;
+    border-radius: 15px;
 }
