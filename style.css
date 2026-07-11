@@ -21,6 +21,15 @@ html {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .servidor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+    background: none;
+    }
 }
 
 
@@ -158,4 +167,31 @@ h1 {
     height: 300px;
     object-fit: fill;
     border-radius: 15px;
+}
+
+.servidor {
+    display: flex;
+    justify-content: space-between 20%;
+    align-items: center;
+    padding: 50px;
+    gap: 200px;
+    background: none;
+    transition: 0.4s;
+}
+
+.servidor span {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    max-width: 50%;
+}
+
+.servidor .paineldc {
+    transition: 0.4s;
+}
+
+.servidor .paineldc:hover {
+    transform: translateX(25px);
+    box-shadow: -10px 5px 13px #080808;
 }
