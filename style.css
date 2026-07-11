@@ -190,6 +190,13 @@ h1 {
     text-shadow: 0 5px 13px #080808;
 }
 
+.pajudaentrar {
+    margin-left: 2%;
+    margin-top: 0%;
+    color: #808080;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .servidor .paineldc {
     transition: 0.4s;
 }
