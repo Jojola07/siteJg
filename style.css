@@ -1,306 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: #222222;
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-@media (max-width: 768px) {
-    .card {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .links {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .servidor {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    gap: 20px;
-    background: none;
-    }
-}
-
-
-
 .navbar {
     background: none;
-    padding: 1.2%;
+    padding: 1.2% 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    flex-wrap: wrap;
 }
-
 
 .logo {
     display: flex;
     align-items: center;
     transition: 0.3s;
 }
-
 .logo:hover {
     transform: translateY(-4px);
 }
 
 .fotobot {
     width: 67px;
+    height: auto;
 }
-
 
 .logo span {
     margin-left: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
-    font-size: larger;
+    font-size: 1.4rem;
     font-weight: bold;
     text-shadow: 0 5px 20px #080808;
 }
-
 
 .links {
     display: flex;
     gap: 20px;
 }
 
-
 .navt {
-    margin: 0px;
     text-decoration: none;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    transition: 0.3s;
     font-weight: bold;
+    transition: 0.3s;
     display: inline-block;
 }
-
-
 .navt:hover {
     color: #4169E1;
     transform: translateY(-5px);
     text-shadow: 0 5px 15px #4169E1;
 }
 
-h1 {
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+#inicio {
     text-align: center;
+    padding: 40px 5% 20px;
+}
+
+#inicio h1 {
+    color: white;
+    font-size: 2.8rem;
     text-shadow: 0 5px 10px #080808;
+    margin-bottom: 20px;
 }
 
 .iniciodiv {
-    
     display: flex;
     justify-content: center;
-    padding: 30px;
-    gap: 20px;
+    padding: 20px 0 30px;
 }
 
-.iniciodiv .btnadd {
-    transition: 0.2s;
+.btnadd {
     background-color: #4169E1;
-    padding: 10px;
+    padding: 12px 30px;
     text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
     color: white;
-    border-radius: 20px;
-    text-align: center;
-    display: flex;
-    gap: 10px;
+    border-radius: 30px;
+    transition: 0.3s;
+    display: inline-block;
 }
-
-.iniciodiv .btnadd:hover {
+.btnadd:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px #4169E1;
+    box-shadow: 0 8px 20px rgba(65, 105, 225, 0.5);
 }
 
 .fotojoaomeio {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding: 20px 0;
 }
-
+.fotojoaomeio .joao {
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+}
 
 .cardbase {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding-top: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     background: #363636;
-    border-radius: 20px;
-    gap: 50px;
-    padding: 50px;
+    border-radius: 30px;
+    padding: 50px 40px;
+    margin: 60px 5% 0;
 }
 
-.cardbase .card {
+.card {
     background: #202020;
-    text-decoration: none;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 30px;
+    padding: 20px 15px 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     transition: 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 5px 15px #131313;
-}
-
-.cardbase .card:hover {
-    transform: translateY(-10px);
-}
-
-.cardbase .card h2,h3 {
     text-align: center;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.7);
+}
+
+.card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
     text-shadow: 0 5px 17px #080808;
 }
+.card h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 0 5px;
+    text-shadow: 0 5px 17px #080808;
+    margin-top: 10px;
+}
+.card img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
 
-.cardbase .card img {
-    width: 300px;
-    height: 300px;
-    object-fit: fill;
-    border-radius: 15px;
+#suporte {
+    padding: 40px 5% 20px;
 }
 
 .servidor {
     display: flex;
-    justify-content: space-between 20%;
     align-items: center;
-    padding: 50px;
-    gap: 200px;
-    background: none;
-    transition: 0.4s;
+    justify-content: center;
+    gap: 60px;
+    padding: 30px 0;
+    flex-wrap: wrap;
 }
 
 .servidor span {
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    font-size: 45px;
-    max-width: 50%;
+    font-size: 2.2rem;
+    max-width: 500px;
     text-shadow: 0 5px 13px #080808;
-}
-
-.pajudaentrar {
-    margin-left: 2%;
-    margin-top: 0%;
-    color: #808080;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.3;
 }
 
 .servidor .paineldc {
+    border-radius: 15px;
     transition: 0.4s;
+    max-width: 100%;
+}
+.servidor .paineldc:hover {
+    transform: translateX(10px);
+    box-shadow: -10px 10px 20px rgba(0,0,0,0.6);
 }
 
-.servidor .paineldc:hover {
-    transform: translateX(25px);
-    box-shadow: -10px 5px 13px #080808;
+.pajudaentrar {
+    text-align: center;
+    color: #808080;
+    font-size: 0.95rem;
+    margin-top: 0px;
 }
 
 .footer {
-    border-top: 1px solid #4169E1;
+    border-top: 2px solid #4169E1;
     background: #080808;
-    padding: 40px 5%;
+    padding: 40px 5% 20px;
     margin-top: 60px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .footer-top {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
     margin-bottom: 30px;
 }
 
 .contato {
     display: flex;
-    flex-direction: column; 
-    gap: 10px;          
+    flex-direction: column;
+    gap: 12px;
 }
 
 .contato-item {
     display: flex;
-    align-items: center; 
-    gap: 10px;             
+    align-items: center;
+    gap: 12px;
 }
 
 .contato-item i {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #4169E1;
-    width: 1.5rem;         
+    width: 2rem;
+    text-align: center;
 }
 
 .contato-item .email {
     color: #4169E1;
-    font-size: 1rem;
     font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
 }
-
 
 .contato-item span {
     color: white;
     font-size: 1rem;
 }
-
 .contato-item a {
     color: #4169E1;
-    font-size: 1rem;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .contato-item a:hover {
-    text-shadow: 0 5px 15px #4169E1;
+    text-shadow: 0 0 15px #4169E1;
 }
 
-.navegacap {
+.navegacao {
     text-align: right;
 }
-
 .navegacao span {
     display: block;
     color: white;
     font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
 }
-
 .navegacao ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
-
 .navegacao li {
-    margin: 10px;
+    margin: 8px 0;
 }
-
 .navegacao a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
     transition: 0.3s;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 .navegacao a:hover {
     color: #4169E1;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     display: inline-block;
 }
 
@@ -312,6 +286,132 @@ h1 {
     font-size: 0.9rem;
 }
 
-.footerbaixo span {
-    color: #888;
+@media (max-width: 1024px) {
+    .cardbase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 15px 5%;
+    }
+    .links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #inicio h1 {
+        font-size: 2rem;
+        padding: 0 5%;
+    }
+
+    /* BOTÃO */
+    .btnadd {
+        padding: 10px 25px;
+        font-size: 0.95rem;
+    }
+
+    .fotojoaomeio .joao {
+        width: 70%;
+        max-width: 280px;
+    }
+
+    .cardbase {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 25px 20px;
+        margin: 30px 5% 0;
+    }
+    .card img {
+        max-width: 200px;
+    }
+    .card h2 {
+        font-size: 1.3rem;
+    }
+    .card h3 {
+        font-size: 0.9rem;
+    }
+
+    .servidor {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 0;
+    }
+    .servidor span {
+        font-size: 1.6rem;
+        max-width: 100%;
+        text-align: center;
+        order: 2; 
+    }
+    .servidor .paineldc {
+        width: 100%;
+        max-width: 340px;
+        height: 400px;
+        order: 1;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+    .servidor .paineldc:hover {
+        transform: none !important;
+        box-shadow: none !important;
+    }
+
+    .footer {
+        padding: 30px 5% 20px;
+        margin-top: 40px;
+    }
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .contato {
+        align-items: center;
+    }
+    .contato-item {
+        justify-content: center;
+    }
+    .navegacao {
+        text-align: center;
+    }
+    .navegacao ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .navegacao li {
+        margin: 0;
+    }
+    .footerbaixo {
+        font-size: 0.75rem;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #inicio h1 {
+        font-size: 1.6rem;
+    }
+    .servidor span {
+        font-size: 1.3rem;
+    }
+    .servidor .paineldc {
+        height: 350px;
+    }
+    .cardbase {
+        padding: 20px 15px;
+    }
+    .btnadd {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
 }
