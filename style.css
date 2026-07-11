@@ -35,7 +35,7 @@ html {
 
 
 .navbar {
-    background: #363636;
+    background: none;
     padding: 1.2%;
     display: flex;
     align-items: center;
@@ -131,6 +131,7 @@ h1 {
     justify-content: center;
     padding-top: 50px;
 }
+
 
 .cardbase {
     display: grid;
