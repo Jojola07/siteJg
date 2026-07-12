@@ -415,3 +415,14 @@ html {
         font-size: 0.85rem;
     }
 }
+
+#funcionalidades span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: -10px;
+    text-shadow: 0 5px 15px  #080808;
+}
