@@ -1,3 +1,4 @@
+/* ===== RESET E CONFIGURAÇÕES GERAIS ===== */
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +16,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
     background: none;
     padding: 1.2% 5%;
@@ -64,6 +66,7 @@ html {
     text-shadow: 0 5px 15px #4169E1;
 }
 
+/* ===== SEÇÃO INÍCIO ===== */
 #inicio {
     text-align: center;
     padding: 40px 5% 20px;
@@ -108,14 +111,31 @@ html {
     width: 400px;
 }
 
-.cardbase {
+/* ===== TÍTULOS DAS SEÇÕES (Funcionalidades e Comandos) ===== */
+#funcionalidades > span,
+#comandos > span {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 5px 15px #080808;
+    margin: 60px 0 0;
+    padding: 0 5%;
+}
+#funcionalidades > span {
+    margin-top: 80px;
+}
+
+/* ===== CARDS (funcionalidades e comandos) ===== */
+.cardbase,
+.comandosfundo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     background: #363636;
     border-radius: 30px;
     padding: 50px 40px;
-    margin: 60px 5% 0;
+    margin: 30px 5% 0;
 }
 
 .card {
@@ -156,6 +176,7 @@ html {
     aspect-ratio: 1 / 1;
 }
 
+/* ===== SEÇÃO SUPORTE ===== */
 #suporte {
     padding: 40px 5% 20px;
 }
@@ -195,6 +216,7 @@ html {
     margin-top: 0px;
 }
 
+/* ===== FOOTER ===== */
 .footer {
     border-top: 2px solid #4169E1;
     background: #080808;
@@ -286,15 +308,21 @@ html {
     font-size: 0.9rem;
 }
 
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets e telas médias */
 @media (max-width: 1024px) {
-    .cardbase {
+    .cardbase,
+    .comandosfundo {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
         padding: 40px 30px;
     }
 }
 
+/* Celulares (até 768px) */
 @media (max-width: 768px) {
+    /* NAVBAR */
     .navbar {
         flex-direction: column;
         align-items: center;
@@ -307,27 +335,40 @@ html {
         justify-content: center;
     }
 
+    /* TÍTULO PRINCIPAL */
     #inicio h1 {
         font-size: 2rem;
         padding: 0 5%;
     }
 
+    /* BOTÃO ADICIONAR */
     .btnadd {
         padding: 10px 25px;
         font-size: 0.95rem;
     }
 
+    /* IMAGEM DO BOT */
     .fotojoaomeio .joao {
         width: 70%;
         max-width: 280px;
     }
 
-    .cardbase {
+    /* TÍTULOS DAS SEÇÕES (Funcionalidades e Comandos) */
+    #funcionalidades > span,
+    #comandos > span {
+        font-size: 2.2rem;
+        margin-top: 40px;
+    }
+
+    /* CARDS - ambos os grids viram 1 coluna */
+    .cardbase,
+    .comandosfundo {
         grid-template-columns: 1fr;
         gap: 30px;
         padding: 25px 20px;
-        margin: 30px 5% 0;
+        margin: 20px 5% 0;
     }
+
     .card img {
         max-width: 200px;
     }
@@ -338,6 +379,7 @@ html {
         font-size: 0.9rem;
     }
 
+    /* SUPORTE */
     .servidor {
         flex-direction: column;
         gap: 30px;
@@ -347,7 +389,7 @@ html {
         font-size: 1.6rem;
         max-width: 100%;
         text-align: center;
-        order: 2; 
+        order: 2; /* texto embaixo do iframe */
     }
     .servidor .paineldc {
         width: 100%;
@@ -362,6 +404,7 @@ html {
         box-shadow: none !important;
     }
 
+    /* FOOTER */
     .footer {
         padding: 30px 5% 20px;
         margin-top: 40px;
@@ -396,6 +439,7 @@ html {
     }
 }
 
+/* Celulares muito pequenos (ex: iPhone SE) */
 @media (max-width: 480px) {
     #inicio h1 {
         font-size: 1.6rem;
@@ -406,44 +450,12 @@ html {
     .servidor .paineldc {
         height: 350px;
     }
-    .cardbase {
+    .cardbase,
+    .comandosfundo {
         padding: 20px 15px;
     }
     .btnadd {
         padding: 8px 20px;
         font-size: 0.85rem;
     }
-}
-
-#funcionalidades span {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    margin-bottom: -10px;
-    text-shadow: 0 5px 15px  #080808;
-}
-
-.comandosfundo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    background: #363636;
-    border-radius: 30px;
-    padding: 50px 40px;
-    margin: 60px 5% 0;
-}
-
-#comandos span {
-    margin-top: 200px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    margin-bottom: -10px;
-    text-shadow: 0 5px 15px  #080808;
 }
