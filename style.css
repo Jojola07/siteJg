@@ -312,7 +312,6 @@ html {
         padding: 0 5%;
     }
 
-    /* BOTÃO */
     .btnadd {
         padding: 10px 25px;
         font-size: 0.95rem;
@@ -417,6 +416,28 @@ html {
 }
 
 #funcionalidades span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: -10px;
+    text-shadow: 0 5px 15px  #080808;
+}
+
+.comandosfundo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    background: #363636;
+    border-radius: 30px;
+    padding: 50px 40px;
+    margin: 60px 5% 0;
+}
+
+#comandos span {
+    margin-top: 200px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3rem;
     font-weight: bold;
